@@ -1,17 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-const { getConfig } = require("./lib/configdb");
 
-if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
-
-function convertToBool(text, fault = 'true') {
-    return text === fault ? true : false;
-}
-
-module.exports = {
-    // ===== BOT CORE SETTINGS =====
-    SESSION_ID: process.env.SESSION_ID || "",  // Your bot's session ID (keep uzairmd
-    BOT_NAME: process.env.BOT_NAME || getConfig("BOT_NAME") || "DARKZONE-MD",  // Bot's display name
+if (fs.existsSync('cuzairmd
+                  AME: process.env.BOT_NAME || getConfig("BOT_NAME") || "DARKZONE-MD",  // Bot's display name
     MODE: getConfig("MODE") || process.env.MODE || "public",        // Bot mode: public/private/group/inbox
     REPO: process.env.REPO || "https://github.com/ERFAN-Md/DARKZONE-MD/forkhttps://github.com/ERFAN-Md/DARKZONE-MD",  // Bot's GitHub repo
     BAILEYS: process.env.BAILEYS || "@whiskeysockets/baileys",  // Bot's BAILEYS
